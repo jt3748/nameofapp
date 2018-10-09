@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!-- there’s some weird syntax that looks like this: <%= %>. That’s the .erb part. "ERB" stands for "embedded Ruby". It's a way to include actual Ruby code (as you've learned in the previous Exercises) right in the middle of your HTML files. By embedding Ruby code between tags that look like this: <% %>, you can include and execute Ruby functions right in the middle of your HTML. Add the =, like so: <%= %> and the output of the Ruby will be inserted into the HTML. (This is important to remember, so take note of or bookmark this.) In just a moment, you'll see an example of what that means. -->
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", simple_pages_about_path %></li>
+        <li><%= link_to "Contact", simple_pages_contact_path %></li>
+      </ul>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+      &copy; 2018 Bike Berlin
+    </footer>
   </body>
 </html>
