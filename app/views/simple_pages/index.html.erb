@@ -1,4 +1,65 @@
-<h1>SimplePages#index</h1>
-<p>Find me in app/views/simple_pages/index.html.erb</p>
-<h1>Welcome to Art & Stuff</h1>
-<h2>The one stop shop for funky cool art</h2>
+<!-- <section class="bgimage"> -->
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="padding-zero col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <%= image_tag("hand.jpg", class: "img-fluid homepage-hero") %>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
+      </div>
+    </div>
+  </div> -->
+  <%= javascript_include_tag "script", "data-turbolinks-track" => true  %>
+
+  <div class="hero">
+    <%= image_tag("hand.jpg", class: "img-fluid") %>
+      <div class="hero-caption text-right">
+        <div class="container">
+          <h1 class="caption-lg letter-spacing-md">Welcome to Artis</h1>
+          <h5 class="caption-sm letter-spacing-sm">The One Stop Shop to Buy Sell Trade Exclusive Art</h5>
+        </div>
+        <div class="container center button-container">
+          <div class="scroll-button">
+            <button type="button" name="button"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+<!-- </section> -->
+<section class="homepage-collection" id="homepage-collection">
+
+  <h1 class="homepage-subtitle text-center letter-spacing-md">Featured Products</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+      </div>
+
+      </div>
+    </div>
+</section>

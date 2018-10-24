@@ -12,3 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+#the below text is what includes script.js only on index.html.erb becuase the smoothscrollspy effect was lost upon switching views
+Rails.application.config.assets.precompile += %w( script.js )

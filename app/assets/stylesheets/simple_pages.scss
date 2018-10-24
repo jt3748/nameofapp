@@ -1,3 +1,209 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body{
+  padding-top: 57px;
+  margin: 0;
+  font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+  height:100%;
+}
+*{
+
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+}
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.jumbo {
+  font-size: 30px;
+}
+.info-bar {
+  width: 100%;
+  background-color: black;
+  height: 30px;
+  color: white;
+  padding-top: 5px;
+  font-weight: lighter;
+  font-size: 7px;
+
+}
+
+.nav-item{
+  margin-left: 30px;
+}
+// .homepage-hero {
+//     position: relative;
+//     overflow: hidden;
+//     background-color: #fff;
+//     max-height: 400px;
+//   }
+.margin-top{
+  top: 115px;
+  position: relative;
+  z-index:1
+}
+// .bgimage {
+//   width:100%;
+//   background: url(app/assets/images/hand.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size:cover;
+//   background-attachment: fixed;
+// }
+.hero-caption{
+  position: absolute;
+  top: 35%;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  z-index: 2;
+  width: 100%;
+  // color: #fff;
+  // text-align: center;
+  // left: 0;
+  // right: 0;
+  // top: 10%;
+  // letter-spacing: 3px;
+}
+.caption-lg{
+  font-size: 15px;
+}
+.caption-sm{
+  font-size: 8px;
+}
+
+.product{
+  padding: 25px 55px;
+}
+.homepage-collection {
+  padding-top: 50px;
+}
+.homepage-subtitle {
+  // margin-top:95px;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1em;
+}
+// DRY
+.letter-spacing-sm{
+  letter-spacing: 3px;
+}
+.letter-spacing-md{
+  letter-spacing: 8px;
+}
+.letter-spacing-lg{
+  letter-spacing: 20px;
+}
+.padding-zero{
+  padding: 0;
+}
+// BREAKPOINTS
+// Small devices (landscape phones, 340px and up)
+@media (min-width: 340px) {
+  .info-bar {
+    padding-top: 3px;
+    font-size: 10px;
+  }
+  .jumbo {
+    font-size: 50px;
+  }
+  .caption-lg{
+    font-size: 35px;
+  }
+  .caption-sm{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  .caption-lg{
+    font-size: 35px;
+  }
+  .caption-sm{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .caption-lg{
+    font-size: 25px;
+  }
+  .caption-sm {
+    font-size:
+    15px;
+  }
+  .hero-caption{
+    top: 45%;
+  }
+  .hero-caption>.container {
+    padding: 0;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .info-bar {
+    font-weight: 300;
+    letter-spacing: 8px;
+    font-size: 13px;
+    padding-top: 2px;
+  }
+  .caption-lg {
+    font-size: 50px
+  }
+  .caption-sm {
+    font-size: 25px;
+    letter-spacing: 2px !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+//smooth scroll on index.html.erb
+#homepage-collection {
+  margin-top:20px;
+}
+.button-container button {
+  position: relative;
+  top: 80px;
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+  background-color: rgba(0,0,0,.2);
+}
+.scroll-button a {
+  text-decoration: none;
+  color: white;
+  z-index:5;
+}
+.scroll-button i {
+  font-size: 2.5em;
+  padding-top: 1px
+}
+//about
+.about-caption {
+  padding: 25px 0;
+}
+//semantic
+.center {
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
+footer {
+  position:absolute;
+  width:100%;
+  height: 30px;
+}
