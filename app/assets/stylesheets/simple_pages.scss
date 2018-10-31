@@ -4,7 +4,7 @@
 html, body{
   padding-top: 57px;
   margin: 0;
-  font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+  // font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
   height:100%;
 }
 *{
@@ -17,9 +17,15 @@ header {
   left: 0;
   z-index: 5000;
 }
+footer {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding: 35px 0;
+  bottom: 0;
+ }
 .navbar {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 14.5px 0;
 }
 .jumbo {
   font-size: 30px;
@@ -29,10 +35,9 @@ header {
   background-color: black;
   height: 30px;
   color: white;
-  padding-top: 5px;
+  padding-top: 2px;
   font-weight: lighter;
-  font-size: 7px;
-
+  font-size: 13px;
 }
 
 .nav-item{
@@ -44,11 +49,7 @@ header {
 //     background-color: #fff;
 //     max-height: 400px;
 //   }
-.margin-top{
-  top: 115px;
-  position: relative;
-  z-index:1
-}
+
 // .bgimage {
 //   width:100%;
 //   background: url(app/assets/images/hand.jpg);
@@ -57,45 +58,35 @@ header {
 //   background-size:cover;
 //   background-attachment: fixed;
 // }
-.hero-caption{
-  position: absolute;
-  top: 35%;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  z-index: 2;
-  width: 100%;
-  // color: #fff;
-  // text-align: center;
-  // left: 0;
-  // right: 0;
-  // top: 10%;
-  // letter-spacing: 3px;
+
+
+
+
+
+// DRY
+.margin-top{
+  margin-top: 35px;
 }
 .caption-lg{
-  font-size: 15px;
+  font-size: 9.5vw;
+}
+.caption-md{
+  font-size: 6.25vw;
 }
 .caption-sm{
-  font-size: 8px;
+  font-size: 3vw;
 }
-
-.product{
-  padding: 25px 55px;
+.center {
+  text-align: center;
 }
-.homepage-collection {
-  padding-top: 50px;
+.justify {
+  text-align: justify;
 }
-.homepage-subtitle {
-  // margin-top:95px;
-  font-size: 2em;
-  font-weight: normal;
-  line-height: 1em;
-}
-// DRY
 .letter-spacing-sm{
-  letter-spacing: 3px;
+  letter-spacing: .3vw;
 }
 .letter-spacing-md{
-  letter-spacing: 8px;
+  letter-spacing: .9vw;
 }
 .letter-spacing-lg{
   letter-spacing: 20px;
@@ -103,80 +94,33 @@ header {
 .padding-zero{
   padding: 0;
 }
-// BREAKPOINTS
-// Small devices (landscape phones, 340px and up)
-@media (min-width: 340px) {
-  .info-bar {
-    padding-top: 3px;
-    font-size: 10px;
-  }
-  .jumbo {
-    font-size: 50px;
-  }
-  .caption-lg{
-    font-size: 35px;
-  }
-  .caption-sm{
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
+//homepage
+.hero{
+  position: relative;
 }
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-
-  .caption-lg{
-    font-size: 35px;
-  }
-  .caption-sm{
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
+.hero-caption{
+  position: relative;
+    bottom: 40vw;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    z-index: 2;
+    width: 100%;
+  // color: #fff;
+  // text-align: center;
+  // left: 0;
+  // right: 0;
+  // top: 10%;
+  // letter-spacing: 3px;
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .caption-lg{
-    font-size: 25px;
-  }
-  .caption-sm {
-    font-size:
-    15px;
-  }
-  .hero-caption{
-    top: 45%;
-  }
-  .hero-caption>.container {
-    padding: 0;
-  }
-}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .info-bar {
-    font-weight: 300;
-    letter-spacing: 8px;
-    font-size: 13px;
-    padding-top: 2px;
-  }
-  .caption-lg {
-    font-size: 50px
-  }
-  .caption-sm {
-    font-size: 25px;
-    letter-spacing: 2px !important;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
-
-//smooth scroll on index.html.erb
-#homepage-collection {
-  margin-top:20px;
+.button-container {
+  margin-top: -28vw;
+  position: relative;
 }
 .button-container button {
-  position: relative;
-  top: 80px;
+  // position: relative;
+  // top: 45vw;
   border-radius: 100px;
   height: 45px;
   width: 45px;
@@ -193,17 +137,98 @@ header {
 }
 //about
 .about-caption {
-  padding: 25px 0;
+  padding-bottom: 15px;
 }
-//semantic
-.center {
-  text-align: center;
+.product{
+  padding: 25px 55px;
 }
-.justify {
-  text-align: justify;
+#homepage-collection {
+  width: 100%;
+  background-color: transparent;
+  padding-top: 100px;
+    margin-top: -100px;
 }
-footer {
-  position:absolute;
-  width:100%;
-  height: 30px;
+.homepage-collection {
+  position:relative;
+  padding-top: 20px;
+
 }
+.homepage-subtitle {
+  font-weight: lighter;
+  line-height: 1em;
+}
+
+/********************* GOOGLE MAP ********************/
+#map {
+  margin-bottom: 25px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+// BREAKPOINTS
+// Small devices (landscape phones, 340px and up)
+// @media (min-width: 340px) {
+//   .info-bar {
+//     padding-top: 3px;
+//     font-size: 10px;
+//   }
+//   .jumbo {
+//     font-size: 50px;
+//   }
+//   .caption-lg{
+//     font-size: 35px;
+//   }
+//   .caption-sm{
+//     font-size: 20px;
+//     letter-spacing: 1px;
+//   }
+// }
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//
+//   .caption-lg{
+//     font-size: 35px;
+//   }
+//   .caption-sm{
+//     font-size: 20px;
+//     letter-spacing: 1px;
+//   }
+// }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .caption-lg{
+//     font-size: 25px;
+//   }
+//   .caption-sm {
+//     font-size:
+//     15px;
+//   }
+//   .hero-caption{
+//     top: 45%;
+//   }
+//   .hero-caption>.container {
+//     padding: 0;
+//   }
+// }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .info-bar {
+//     font-weight: 300;
+//     letter-spacing: 8px;
+//     font-size: 13px;
+//     padding-top: 2px;
+//   }
+//   .caption-lg {
+//     font-size: 50px
+//   }
+//   .caption-sm {
+//     font-size: 25px;
+//     letter-spacing: 2px !important;
+//   }
+// }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }

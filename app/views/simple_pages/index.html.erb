@@ -1,65 +1,80 @@
-<!-- <section class="bgimage"> -->
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="padding-zero col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <%= image_tag("hand.jpg", class: "img-fluid homepage-hero") %>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
-      </div>
-    </div>
-  </div> -->
   <%= javascript_include_tag "script", "data-turbolinks-track" => true  %>
-
   <div class="hero">
-    <%= image_tag("hand.jpg", class: "img-fluid") %>
-      <div class="hero-caption text-right">
-        <div class="container">
-          <h1 class="caption-lg letter-spacing-md">Welcome to Artis</h1>
-          <h5 class="caption-sm letter-spacing-sm">The One Stop Shop to Buy Sell Trade Exclusive Art</h5>
-        </div>
-        <div class="container center button-container">
-          <div class="scroll-button">
-            <button type="button" name="button"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button>
-          </div>
-        </div>
+    <%= image_tag("hand.jpg", class: "hero-img img-fluid") %>
 
-      </div>
+    <div class="hero-caption center">
+        <h1 class="caption-lg letter-spacing-md">Welcome to Artis</h1>
+        <h5 class="caption-sm letter-spacing-sm">The One Stop Shop to Buy Sell Trade Exclusive Art</h5>
+    </div>
 
-  </div>
-<!-- </section> -->
-<section class="homepage-collection" id="homepage-collection">
-
-  <h1 class="homepage-subtitle text-center letter-spacing-md">Featured Products</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-      </div>
-
+    <div class="container center button-container">
+      <div class="scroll-button">
+        <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button>
       </div>
     </div>
-</section>
+
+  </div><!-- </hero> -->
+<!-- </section> -->
+<div id="homepage-collection"></div>
+
+  <div class="homepage-collection">
+    <h1 class="homepage-subtitle text-center letter-spacing-md caption-md">Featured Products</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+        </div>
+      </div><!--row-->
+    </div><!--col-->
+  </div><!--container-->

@@ -12,10 +12,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-  <!-- there’s some weird syntax that looks like this: <%= %>. That’s the .erb part. "ERB" stands for "embedded Ruby". It's a way to include actual Ruby code (as you've learned in the previous Exercises) right in the middle of your HTML files. By embedding Ruby code between tags that look like this: <% %>, you can include and execute Ruby functions right in the middle of your HTML. Add the =, like so: <%= %> and the output of the Ruby will be inserted into the HTML. (This is important to remember, so take note of or bookmark this.) In just a moment, you'll see an example of what that means. -->
+    <!-- there’s some weird syntax that looks like this: <%= %>. That’s the .erb part. "ERB" stands for "embedded Ruby". It's a way to include actual Ruby code (as you've learned in the previous Exercises) right in the middle of your HTML files. By
+    embedding Ruby code between tags that look like this: <% %>, you can include and execute Ruby functions right in the middle of your HTML. Add the =, like so: <%= %> and the output of the Ruby will be inserted into the HTML. (This is important to
+    remember, so take note of or bookmark this.) In just a moment, you'll see an example of what that means. -->
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body data-spy="scroll" data-target="#scroll" data-offset="50">
     <header>
       <div class="info-bar">
         <div class="container">
@@ -49,11 +51,13 @@
       </nav>
     </header>
 
-
     <%= yield %>
 
     <footer class="center">
       &copy; 2018 Artis
     </footer>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXBZp9XkCcfHPyn-XvW9dlUaHCxnAl7bA&callback=initMap">
+    </script>
   </body>
 </html>
