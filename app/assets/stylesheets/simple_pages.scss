@@ -113,10 +113,9 @@ footer {
 }
 
 .sell {
-  padding-right: 20vw;
 }
 .buy {
-  padding-left: 20vw;
+  padding-left: 40vw;
 }
 .rotate{
   transform: rotate(90deg);
@@ -241,12 +240,22 @@ a {
   .active a {
     text-shadow: 0px 0px 0px black !important;
   }
-  .hero-caption h6, .button-container {
+  .hero-caption h6, .button-container, img.flip, img.rotate {
     display: none;
   }
   .buy, .sell {
+    font-size: 6.5vw !important;
     font-weight: bold;
     text-shadow: 0px 0px 35px black;
+  }
+  .buy{
+    padding-left: 20vw;
+  }
+  .hero-caption {
+    bottom: 40vw;
+  }
+  .hero-caption h5 {
+    text-shadow: 0px 0px 5px white;
 
   }
 }
