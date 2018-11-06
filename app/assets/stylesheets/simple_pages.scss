@@ -19,7 +19,6 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 5000;
 }
 footer {
   // position: relative;
@@ -27,8 +26,19 @@ footer {
   height: 30px;
   // bottom: 0;
  }
+ footer p {
+   padding: 15px 0;
+ }
+ .nav-white {
+   width: 100%;
+   position: fixed;
+   height: 100px;
+   background-color: white;
+   top: 0;
+ }
 .navbar {
   padding: 14.5px 0;
+  background-color: transparent;
 }
 .jumbo {
   font-size: 30px;
@@ -43,41 +53,23 @@ footer {
   font-size: 13px;
 }
 
-.nav-item{
-  margin-left: 30px;
-}
-// .homepage-hero {
-//     position: relative;
-//     overflow: hidden;
-//     background-color: #fff;
-//     max-height: 400px;
-//   }
-
-// .bgimage {
-//   width:100%;
-//   background: url(app/assets/images/hand.jpg);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size:cover;
-//   background-attachment: fixed;
-// }
-
-
-
 
 
 // DRY
+.inline {
+  display: inline;
+}
 .padding-top{
   padding-top: 55px;
 }
 .caption-lg{
-  font-size: 9.5vw;
+  font-size: 4.5vw;
 }
 .caption-md{
-  font-size: 6.25vw;
 }
 .caption-sm{
   font-size: 3vw;
+  padding-top: 1.5vw;
 }
 .center {
   text-align: center;
@@ -92,21 +84,21 @@ footer {
   letter-spacing: .9vw;
 }
 .letter-spacing-lg{
-  letter-spacing: 20px;
+  letter-spacing: 13px;
 }
 .padding-zero{
   padding: 0;
 }
 //homepage
+
 .hero{
-  position: relative;
+  margin-top: -100px;
 }
 .hero-caption{
   position: relative;
-    bottom: 40vw;
+    bottom: 47vw;
     color: white;
-    text-shadow: 2px 2px 2px black;
-    z-index: 2;
+    text-shadow: 0px 0px 35px black;
     width: 100%;
   // color: #fff;
   // text-align: center;
@@ -115,31 +107,58 @@ footer {
   // top: 10%;
   // letter-spacing: 3px;
 }
+.hero-caption h5, .hero-caption h6 {
+  text-shadow: -0.5px 0.5px 23px grey;
+  color: black;
+}
 
-
+.sell {
+  padding-right: 20vw;
+}
+.buy {
+  padding-left: 20vw;
+}
+.rotate{
+  transform: rotate(90deg);
+}
+.flip {
+  -moz-transform: scaleX(-1) scaleY(1) rotate(90deg);
+  -o-transform: scaleX(-1) scaleY(1) rotate(90deg);
+  -webkit-transform: scaleX(-1) scaleY(1) rotate(90deg);
+  transform: scaleX(-1) scaleY(1) rotate(90deg);
+  filter: FlipH;
+  -ms-filter: “FlipH”;
+}
 .button-container {
-  margin-top: -28vw;
+  margin-top: -45.5vw;
   position: relative;
 }
 .button-container button {
   // position: relative;
   // top: 45vw;
   border-radius: 100px;
-  height: 45px;
-  width: 45px;
-  background-color: rgba(0,0,0,.2);
+  height: 60px;
+  width: 60px;
+  background-color: #116248;
+  box-shadow: 0.5px 0.5px 36px grey;
+}
+a {
+ cursor: pointer;
+}
+.cactus-icon {
+  margin-left: -4.5px;
+  color: white;
 }
 .scroll-button a {
   text-decoration: none;
   color: white;
-  z-index:5;
 }
 .scroll-button i {
   font-size: 2.5em;
   padding-top: 1px
 }
 //about
-.about-caption {
+.caption {
   padding-bottom: 15px;
 }
 .product{
@@ -149,7 +168,7 @@ footer {
   width: 100%;
   background-color: transparent;
   padding-top: 100px;
-    margin-top: -100px;
+    margin-top: -30px;
 }
 .homepage-collection {
   position:relative;
@@ -159,6 +178,18 @@ footer {
 .homepage-subtitle {
   font-weight: lighter;
   line-height: 1em;
+}
+.z-2{
+  z-index: -2;
+}
+.z-1{
+  z-index: -1;
+}
+.z1{
+  z-index: 1;
+}
+.z2{
+  z-index: 2;
 }
 
 /********************* GOOGLE MAP ********************/
@@ -170,68 +201,83 @@ footer {
 }
 
 // BREAKPOINTS
-// Small devices (landscape phones, 340px and up)
-// @media (min-width: 340px) {
-//   .info-bar {
-//     padding-top: 3px;
-//     font-size: 10px;
-//   }
-//   .jumbo {
-//     font-size: 50px;
-//   }
-//   .caption-lg{
-//     font-size: 35px;
-//   }
-//   .caption-sm{
-//     font-size: 20px;
-//     letter-spacing: 1px;
-//   }
-// }
+@media (max-width: 340px) {
+  .navbar-brand {
+    font-size: 12px;
+  }
+  .navbar-toggler {
+    font-size: 9px;
+  }
+}
+// Small devices (landscape phones, 575px and below)
+@media (max-width: 575px) {
+  .navbar-toggler {
+    font-size: 13px;
+  }
+  .nav-white{
+    height: 70px;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar-brand {
+    padding-top: 5px;
+    letter-spacing: 2px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+    float: right;
+    text-shadow: -0.5px 0.5px 4px black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 9px;
+    width: 75px;
+    text-align: center;
+    background-color: white;
+  }
+  .hero-caption h5 {
+    letter-spacing: 1px;
+  }
+  .active a {
+    text-shadow: 0px 0px 0px black !important;
+  }
+}
 // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//
-//   .caption-lg{
-//     font-size: 35px;
-//   }
-//   .caption-sm{
-//     font-size: 20px;
-//     letter-spacing: 1px;
-//   }
-// }
+@media (min-width: 576px) {
 
+  .navbar-brand {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .title {}
+}
 // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   .caption-lg{
-//     font-size: 25px;
-//   }
-//   .caption-sm {
-//     font-size:
-//     15px;
-//   }
-//   .hero-caption{
-//     top: 45%;
-//   }
-//   .hero-caption>.container {
-//     padding: 0;
-//   }
-// }
+@media (min-width: 768px) {
+  .navbar-brand {
+    font-size: 28px;
+    line-height: 1px;
+  }
+}
 
 // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-//   .info-bar {
-//     font-weight: 300;
-//     letter-spacing: 8px;
-//     font-size: 13px;
-//     padding-top: 2px;
-//   }
-//   .caption-lg {
-//     font-size: 50px
-//   }
-//   .caption-sm {
-//     font-size: 25px;
-//     letter-spacing: 2px !important;
-//   }
-// }
+@media (min-width: 992px) {
+
+  .info-bar {
+    font-weight: 300;
+    letter-spacing: 8px;
+    font-size: 13px;
+    padding-top: 2px;
+  }
+  .caption-lg {
+    // font-size: 50px
+  }
+  .caption-sm {
+    // font-size: 25px;
+    // letter-spacing: 2px !important;
+  }
+}
 
 // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {  }
+// @media (max-width: 1200px){}

@@ -1,15 +1,20 @@
-  <%= javascript_include_tag "script", "data-turbolinks-track" => true  %>
-  <div class="hero">
-    <%= image_tag("hand.jpg", class: "hero-img img-fluid") %>
+<div class="nav-white z-1"></div>
+
+<%= javascript_include_tag "script", "data-turbolinks-track" => true  %>
+  <div class="hero z1">
+    <%= image_tag("cacti.jpg", class: "hero-img img-fluid") %>
 
     <div class="hero-caption center">
-        <h1 class="caption-lg letter-spacing-md">Welcome to Vendito</h1>
-        <h5 class="caption-sm letter-spacing-sm">The One Stop Shop to Buy Sell Trade Exclusive Art</h5>
+        <h1 class="caption-lg letter-spacing-lg inline sell"><a>SELL</a></h1>
+        <h1 class="caption-lg letter-spacing-lg inline buy"><a>BUY</a></h1>
+        <h5 class="caption-sm letter-spacing-md"><img class="flip" src="https://img.icons8.com/ios/50/000000/undo-filled.png">Click one to get started<img class="rotate" src="https://img.icons8.com/ios/50/000000/undo-filled.png"></h5>
+        <h6>Or click on the cactus icon to skip this step</h6>
     </div>
 
     <div class="container center button-container">
       <div class="scroll-button">
-        <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button>
+        <%# <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button> %>
+        <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><img class="cactus-icon img-fluid" src="https://img.icons8.com/ios/50/ffffff/cactus.png"></a></button>
       </div>
     </div>
 
@@ -17,64 +22,62 @@
 <!-- </section> -->
 <div id="homepage-collection"></div>
 
-  <div class="homepage-collection">
-    <h1 class="homepage-subtitle text-center letter-spacing-md caption-md">Featured Products</h1>
+  <div class="homepage-collection z-2">
+    <h1 class="homepage-subtitle text-center letter-spacing-md caption-lg">Featured Products</h1>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("1.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("2.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("3.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("4.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("5.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("6.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("7.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("8.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("9.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("10.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("11.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("12.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("13.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("14.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("15.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("16.jpg", class: "img-fluid product") %>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
+          <%= image_tag("17.jpg", class: "img-fluid product") %>
         </div>
-        <div class="col-lg-4 col-sm-6">
-          <%= image_tag("racebike.jpg", class: "img-fluid product") %>
-        </div>
+
       </div><!--row-->
     </div><!--col-->
   </div><!--container-->

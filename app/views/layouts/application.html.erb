@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nameofapp</title>
+    <title>Master Medium</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -19,7 +19,7 @@
 
   <body data-spy="scroll" data-target="#scroll" data-offset="50">
     <div class="wrapper">
-      <header>
+      <header class="z2">
         <div class="info-bar">
           <div class="container">
             <div class="d-flex flex-row justify-content-end login-font letter-spacing-sm">
@@ -29,14 +29,14 @@
             </div>
           </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-light ">
           <div class="container">
-            <a class="navbar-brand jumbo letter-spacing-lg" href="#">VENDITO</a>
+            <a class="navbar-brand" href="#">MASTER MEDIUM</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto letter-spacing-md">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                   <%= link_to "Home", root_path, class: "nav-link" %>
                 </li>
@@ -52,11 +52,12 @@
         </nav>
       </header>
 
+
       <%= yield %>
     </div><!--/wrapper-->
 
     <footer class="center">
-      &copy; 2018 Vendito
+      <p>&copy; 2018 Master Medium</p>
     </footer>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXBZp9XkCcfHPyn-XvW9dlUaHCxnAl7bA&callback=initMap">
