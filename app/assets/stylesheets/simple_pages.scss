@@ -37,8 +37,18 @@ footer {
    top: 0;
  }
 .navbar {
-  padding: 14.5px 0;
   background-color: transparent;
+}
+.taj-nav-link {
+  display: inline-flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.taj-nav-link a {
+  color: rgba(0,0,0,.5)
 }
 .jumbo {
   font-size: 30px;
@@ -197,6 +207,7 @@ a {
   height: 100%;
   width: 100%;
   border-radius: 15px;
+  min-height: 200px;
 }
 
 // BREAKPOINTS
@@ -210,6 +221,19 @@ a {
 }
 // Small devices (landscape phones, 575px and below)
 @media (max-width: 575px) {
+  .navbar>.container, .navbar>.container-fluid {
+    display: block;
+  }
+  .nav-link a {
+    padding-top: 0;
+  }
+  .taj-nav-link a {
+    margin-top: -20px;
+    padding-top: 0 !important;
+  }
+  .nav-container {
+    text-align: center;
+  }
   .navbar-toggler {
     font-size: 13px;
   }
@@ -222,17 +246,21 @@ a {
   .navbar-brand {
     padding-top: 5px;
     letter-spacing: 2px;
+    margin: 0 auto;
+  }
+  .navbar-nav {
+    flex-direction: row;
   }
   .navbar-light .navbar-nav .nav-link {
-    color: white;
-    float: right;
-    text-shadow: -0.5px 0.5px 4px black;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-radius: 9px;
-    width: 75px;
-    text-align: center;
-    background-color: white;
+    // color: white;
+    // float: right;
+    // text-shadow: -0.5px 0.5px 4px black;
+    // padding-top: 2px;
+    // padding-bottom: 2px;
+    // border-radius: 9px;
+    width: 55px;
+    // text-align: center;
+    // background-color: white;
   }
   .hero-caption h5 {
     letter-spacing: 1px;
@@ -244,19 +272,34 @@ a {
     display: none;
   }
   .buy, .sell {
-    font-size: 6.5vw !important;
+    font-size: 51px !important;
     font-weight: bold;
     text-shadow: 0px 0px 35px black;
+    display: block;
   }
   .buy{
-    padding-left: 20vw;
+    padding-left: 0;
+    padding-top: 15px;
   }
   .hero-caption {
     bottom: 40vw;
   }
   .hero-caption h5 {
     text-shadow: 0px 0px 5px white;
-
+    position: relative;
+    bottom: 96px;
+  }
+  #homepage-collection {
+    padding-top: 50px;
+  }
+  .hero {
+    color: black;
+  }
+  .hero-img{
+    opacity: 0;
+  }
+  .caption-sm{
+    font-size: 13px;
   }
 }
 // Small devices (landscape phones, 576px and up)
