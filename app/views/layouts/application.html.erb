@@ -37,15 +37,15 @@
             </button> %>
             <%# <div class="collapse navbar-collapse" id="navbarNav"> %>
             <div class="" id="navbarNav">
-              <ul class=" taj-nav-link">
-                <li class="nav-item active">
-                  <%= link_to "Home", root_path, class: "nav-link" %>
+              <ul class="taj-nav-link">
+                <li class="nav-item nav-link">
+                  <%= link_to "Home", root_path, :class => current_class?(root_path) %>
                 </li>
-                <li class="nav-item">
-                  <%= link_to "About", simple_pages_about_path, class: "nav-link" %>
+                <li class="nav-item nav-link">
+                  <%= link_to "About", simple_pages_about_path, :class => current_class?(simple_pages_about_path) %>
                 </li>
-                <li class="nav-item">
-                  <%= link_to "Contact", simple_pages_contact_path, class: "nav-link" %>
+                <li class="nav-item nav-link">
+                  <%= link_to "Contact", simple_pages_contact_path, :class => current_class?(simple_pages_contact_path) %>
                 </li>
               </ul>
             </div>
