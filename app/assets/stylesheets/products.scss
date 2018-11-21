@@ -12,3 +12,23 @@
   top: 0;
   z-index: 1;
 }
+.img-fit {
+  max-height: 140px;
+  min-height: 135px;
+}
+.product-name{
+  font-size: 20px;
+}
+.product-description {
+  letter-spacing: 2px;
+}
+.product-color{}
+.product-price{
+  font-weight: bold;
+}
+.product-row {
+  padding-bottom: 10px;
+}
+.show-edit-destroy{
+  display: none;
+}

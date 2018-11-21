@@ -244,7 +244,7 @@ a {
     font-size: 13px;
   }
   .nav-white{
-    height: 70px;
+    // height: 70px;
   }
   .navbar {
     padding: 0;
@@ -310,15 +310,40 @@ a {
   }
 }
 // Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  .taj-nav-link a {
+    // padding: .5rem 0;
+    position: relative !important;
+    bottom: 6px !important;
+  }
+}
 @media (min-width: 576px) {
 
   .navbar-brand {
     font-size: 24px;
     letter-spacing: 5px;
   }
+
 }
 @media (max-width: 768px) {
   .title {}
+}
+//Under 633px
+@media (max-width: 696px) {
+  // .taj-nav-link a {
+  //   // padding: .5rem 0;
+  //   position: relative !important;
+  //   bottom: 6px !important;
+  // }
+}
+@media (max-width: 632px) {
+  .nav-white {
+    height: 81px !important;
+  }
+
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {

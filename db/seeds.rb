@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!")
-Product.create(name: "Horse", description: "White Stallion")
-Post.where(name: "Horse", description: "Black Stallion")
+Product.delete_all
+Product.create(price: 12, name: "Wood Ornament", description: "3x3inches", image_url: "art/ornament.jpg")
+Product.create(price: 85, name: "Stone Angel", description: "1x3feet", image_url: "art/babyangel.jpg")
+Product.create(price: 45, name: "Ceramic Angel", description: "4x6inches", image_url: "art/angel_ceramic.jpg")
+Product.create(price: 12, name: "Metal Figurines", description: "1.5x2.75inches", image_url: "art/monkey_figurines.jpg")
+Product.create(price: 65, name: "Acrylic Canvas", description: "3x3feet", image_url: "art/ocean_canvas.jpg")
+Product.create(price: 25, name: "Acrylic Canvas", description: "3x1.5feet", image_url: "art/cubism.jpg")
+Product.create(price: "15.75", name: "3D Printed Skull", description: "0.5x0.5feet", image_url: "10.jpg")
+Product.create(price: "", name: "", description: "", image_url: "")
