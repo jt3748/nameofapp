@@ -9,12 +9,10 @@
 
 .carousel-item  {
   width: 100%;
-  max-height: 400px;
-  object-fit: scale-down;
+  max-height: 460px;
 }
 .carousel-item img {
-  object-fit: cover;
-  max-height: 400px;
+  
 }
 
 .carousel-inner {
@@ -25,6 +23,16 @@
   border-radius: 25px;
   background-color: black;
 }
+
+/* @media (min-width: 842px) {
+  .carousel-control-next {
+      right: 90px !important;
+      background-color: black;
+  }
+  .carousel-control-prev {
+      left: 90px !important;
+  }
+} */
 /* .carousel-icon-background-left {
   height: 27px;
   width: 27px;

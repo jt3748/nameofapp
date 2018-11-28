@@ -14,3 +14,5 @@ Product.create(price: 65, name: "Acrylic Canvas", description: "3x3feet", image_
 Product.create(price: 25, name: "Acrylic Canvas", description: "3x1.5feet", image_url: "art/cubism.jpg")
 Product.create(price: 15, name: "3D Printed Skull", description: "0.5x0.5feet", image_url: "10.jpg")
 # Product.create(price: "", name: "", description: "", image_url: "")
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)

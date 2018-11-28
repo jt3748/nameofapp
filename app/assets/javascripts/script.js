@@ -1,4 +1,5 @@
 console.log('js is working in scripts')
+
 // --------------SMOOTH SCROLL----------------------
 $(document).ready(function(){
   $(".hero").css({'height':($('.hero-img').height()+'px')});
@@ -9,6 +10,7 @@ $(document).ready(function(){
     $(".hero").css({'height':($('.hero-img').height()+'px')});
   });
   // end window resize function
+  $(".carousel-img").css({'width':($('.carousel-inner').width()+'px')})
 
   var $root = $('html, body');
   $('a').click(function() {
