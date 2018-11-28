@@ -1,0 +1,16 @@
+<div class="product-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <%= image_tag(product.image_url, class: "img-fluid img-fit")unless product.image_url.nil? %>
+  <div class="product-infobox">
+    <a href="#"><h1 class="product-name"><%= product.name %></h1></a>
+    <p class="product-description"><%= product.description %></p>
+    <p class="product-color"><%= product.color %></p>
+    <p class="product-price"><%= product.price %>$</p>
+    <button class="product-button" type="button" name="button">Buy Now!</button>
+  </div>
+
+    <div class="show-edit-destroy">
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div><!-- /row -->
+</div><!-- /col -->
