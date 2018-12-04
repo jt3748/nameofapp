@@ -1,6 +1,4 @@
-console.log('js is working in scripts')
 
-// --------------SMOOTH SCROLL----------------------
 $(document).ready(function(){
   $(".hero").css({'height':($('.hero-img').height()+'px')});
 
@@ -12,18 +10,18 @@ $(document).ready(function(){
   // end window resize function
   $(".carousel-img").css({'width':($('.carousel-inner').width()+'px')})
 
-  var $root = $('html, body');
-  $('a').click(function() {
-    var href = $.attr(this, 'href');
-    if (href != undefined && href != '#') {
-      $root.animate({
-        scrollTop: $(href).offset().top
-      }, 500, function () {
-        window.location.hash = href;
-      });
-    }
-    return false;
-  });
+  // var $root = $('html, body');
+  // $('a').click(function() {
+  //   var href = $.attr(this, 'href');
+  //   if (href != undefined && href != '#') {
+  //     $root.animate({
+  //       scrollTop: $(href).offset().top
+  //     }, 500, function () {
+  //       window.location.hash = href;
+  //     });
+  //   }
+  //   return false;
+  // });
 
 });
 //GOOGLE MAP

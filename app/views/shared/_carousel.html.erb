@@ -1,11 +1,7 @@
-<div class="nav-white z1"></div>
-
-<div class="center">
-  <h1 class="caption">Featured Products:</h1>
-  <%= @featured_product.name %>
-</div>
-
 <div class="container">
+
+  <h3 class="center txt-md">Latest Product: <%= @featured_product.name %> </h3>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <% @products.each_with_index do |product, index| %>
