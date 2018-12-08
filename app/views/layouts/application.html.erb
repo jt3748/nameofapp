@@ -51,8 +51,15 @@
                 <li class="nav-item nav-link">
                   <%= link_to "Contact", simple_pages_contact_path, :class => current_class?(simple_pages_contact_path) %>
                 </li>
+                <li class="nav-item nav-search">
+                  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                    <%= form.text_field :q, id: 'q', value: params[:q] %>
+                    <%= form.submit 'Search' %>
+                  <% end %>
+                </li>
               </ul>
             </div>
+
           </div>
         </nav>
       </header>

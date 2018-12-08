@@ -1,40 +1,33 @@
-<div class="nav-white z1"></div>
+<div class="nav-white z-1"></div>
+    <%= javascript_include_tag "script", "data-turbolinks-track" => true  %>
+    <div class="hero z1" id="hero">
 
-<div class="center">
-  <h1 class="caption">Featured Products:</h1>
-  <%= @featured_product.name %>
-</div>
+      <%= image_tag("cacti.jpg", class: "hero-img img-fluid", id: "hero") %>
 
-<div class="container">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <% @products.each_with_index do |product, index| %>
+      <div class="hero-caption center">
+          <h1 class="txt-lg letter-spacing-lg inline sell"><a>SELL</a></h1>
+          <h1 class="txt-lg letter-spacing-lg inline buy"><a>BUY</a></h1>
+          <h5 class="txt-md letter-spacing-md"><img class="flip" src="https://img.icons8.com/ios/50/000000/undo-filled.png">Click one to get started<img class="rotate" src="https://img.icons8.com/ios/50/000000/undo-filled.png"></h5>
+          <h6 class="txt-sm letter-spacing-sm">Or click on the cactus icon to skip this step</h6>
+      </div>
 
-      <li data-target="#carouselExampleIndicators" data-slide-to="<%="#{index}" %>"  class="<%= " active" if product == @products.first %>"></li>
-
-      <% end %>
-    </ol>
-    <div class="carousel-inner">
-      <% @products.each do |product| %>
-      <div class="carousel-item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url, class:"carousel-img") %>
-        <div class="carousel-caption d-md-block">
-          <%= product.name %>
+      <div class="container center button-container">
+        <div class="scroll-button">
+          <%# <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><i class="fa fa-angle-down" aria-hidden="true"></i></a></button> %>
+          <button type="button" name="button" id="scroll"><a href='#homepage-collection' data-offset='50'><img class="cactus-icon img-fluid" src="https://img.icons8.com/ios/50/ffffff/cactus.png"></a></button>
         </div>
       </div>
-      <% end %>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <div class="carousel-icon-background-left">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </div>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <div class="carousel-icon-background-right">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </div>
-      </a>
-  </div>
-</div>
+
+    </div><!-- </hero> -->
+  <div id="homepage-collection z-1"></div>
+
+    <div class="homepage-collection z-2" id="homepage-collection">
+      <h1 class="center letter-spacing-md txt-lg">Featured Products</h1>
+      <div class="container">
+        <div class="row">
+
+            <%= render partial: "shared/carousel", locals: {product: @products} %>
+
+        </div><!--row-->
+      </div><!--col-->
+    </div><!--container-->
