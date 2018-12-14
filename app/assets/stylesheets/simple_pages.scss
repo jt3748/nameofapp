@@ -1,6 +1,15 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#img-sm {
+  z-index: -4;
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  right: 0px;
+  bottom: 0px;
+  opacity: .7;
+}
 a:hover {
   background: transparent;
   text-decoration: none;
@@ -31,40 +40,54 @@ footer {
  footer p {
    padding: 15px 0;
  }
- .nav-white {
-   width: 100%;
-   position: fixed;
-   height: 81px;
-   background-color: white;
-   top: 0;
+ nav {
+   background-color: rgba(0,0,0,.2);
+ }
+ nav ul li {
+   text-align: right;
+ }
+ // .nav-white {
+ //   width: 100%;
+ //   position: fixed;
+ //   height: 71px;
+ //   background-color: rgba(255,255,255, .85);
+ //   box-shadow: inset 0 0 50px darkgrey;
+ //   top: 0;
+ // }
+ .navbar-nav {
+   // display: inline-flex;
+   // flex-direction: row;
+ }
+ .bg-light {
+   // background-color: transparent !important;
  }
 .navbar {
   background-color: transparent;
 }
-.taj-nav-link {
-  display: inline-flex;
-  flex-direction: row;
-  list-style: none;
-  text-decoration: none;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+// .taj-nav-link {
+//   display: inline-flex;
+//   flex-direction: row;
+//   list-style: none;
+//   text-decoration: none;
+//   margin: 0 !important;
+//   padding: 0 !important;
+// }
 .taj-nav-link a {
   color: rgba(0,0,0,.5)
 }
 @media (min-width: 575px) {
-  .taj-nav-link li {
-    // padding-top: 1rem;
-    // padding-bottom: 1rem;
-    padding-left: 1vw;
-  }
+  // .taj-nav-link li {
+  //   // padding-top: 1rem;
+  //   // padding-bottom: 1rem;
+  //   padding-left: 1vw;
+  // }
 }
 .taj-nav-link li:last-child {
-  padding-right: 10px;
+  // padding-right: 10px;
 }
-.jumbo {
-  font-size: 30px;
-}
+// .jumbo {
+//   font-size: 30px;
+// }
 .info-bar {
   width: 100%;
   background-color: black;
@@ -94,6 +117,19 @@ footer {
 // .grey-background {
 //   background-color: #D4DCDE;
 // }
+.green {
+  background-color: green;
+  border-radius: 15px;
+  padding: 25px;
+}
+.orange {
+  background-color: orange;
+  border-radius: 15px;
+  padding: 25px;
+}
+form .row {
+  display: block;
+}
 .form-check-label {
   margin-bottom: 0.5rem;
   display: inline-block;
@@ -113,7 +149,7 @@ footer {
 }
 .txt-sm {
   font-size: 13px;
-  padding-top: 1.5vw;
+  // padding-top: 1.5vw;
 }
 .center {
   text-align: center;
@@ -247,6 +283,16 @@ a {
 }
 
 // BREAKPOINTS
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: inline-block;
+    -ms-flex-preferred-size: auto;
+    /* flex-basis: auto; */
+    text-align: right;
+    /* margin-right: 0; */
+  }
+}
 @media (max-width: 340px) {
   .navbar-brand {
     font-size: 12px;
@@ -255,49 +301,50 @@ a {
     font-size: 9px;
   }
 }
+
 // Small devices (landscape phones, 575px and below)
 @media (max-width: 575px) {
-  .navbar>.container, .navbar>.container-fluid {
-    display: block;
-  }
-  .nav-link a {
-    padding-top: 0;
-  }
-  .taj-nav-link a {
-    margin-top: -20px;
-    padding-top: 0 !important;
-  }
-  .nav-container {
-    text-align: center;
-  }
-  .navbar-toggler {
-    font-size: 13px;
-  }
-  .nav-white {
-    // height: 70px;
-  }
-  .navbar {
-    padding: 0;
-  }
-  .navbar-brand {
-    padding-top: 5px;
-    letter-spacing: 2px;
-    margin: 0 auto;
-  }
-  .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-light .navbar-nav .nav-link {
-    // color: white;
-    // float: right;
-    // text-shadow: -0.5px 0.5px 4px black;
-    // padding-top: 2px;
-    // padding-bottom: 2px;
-    // border-radius: 9px;
-    width: 55px;
-    // text-align: center;
-    // background-color: white;
-  }
+  // .navbar>.container, .navbar>.container-fluid {
+  //   display: block;
+  // }
+  // .nav-link a {
+  //   padding-top: 0;
+  // }
+  // .taj-nav-link a {
+  //   margin-top: -20px;
+  //   padding-top: 0 !important;
+  // }
+  // .nav-container {
+  //   text-align: center;
+  // }
+  // .navbar-toggler {
+  //   font-size: 13px;
+  // }
+  // .nav-white {
+  //   // height: 70px;
+  // }
+  // .navbar {
+  //   padding: 0;
+  // }
+  // .navbar-brand {
+  //   padding-top: 5px;
+  //   letter-spacing: 2px;
+  //   margin: 0 auto;
+  // }
+  // .navbar-nav {
+  //   flex-direction: row;
+  // }
+  // .navbar-light .navbar-nav .nav-link {
+  //   // color: white;
+  //   // float: right;
+  //   // text-shadow: -0.5px 0.5px 4px black;
+  //   // padding-top: 2px;
+  //   // padding-bottom: 2px;
+  //   // border-radius: 9px;
+  //   width: 55px;
+  //   // text-align: center;
+  //   // background-color: white;
+  // }
   .hero-caption h5 {
     letter-spacing: 1px;
   }
@@ -342,21 +389,21 @@ a {
 }
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 1.25rem;
-  }
-  .taj-nav-link a {
-    // padding: .5rem 0;
-    position: relative !important;
-    bottom: 6px !important;
-  }
+  // .navbar-brand {
+  //   font-size: 1.25rem;
+  // }
+  // .taj-nav-link a {
+  //   // padding: .5rem 0;
+  //   position: relative !important;
+  //   bottom: 6px !important;
+  // }
 }
 @media (min-width: 576px) {
 
-  .navbar-brand {
-    font-size: 24px;
-    letter-spacing: 5px;
-  }
+  // .navbar-brand {
+  //   font-size: 24px;
+  //   letter-spacing: 5px;
+  // }
 
 }
 @media (max-width: 768px) {
@@ -371,17 +418,17 @@ a {
   // }
 }
 @media (max-width: 632px) {
-  .nav-white {
-    height: 81px !important;
-  }
+  // .nav-white {
+  //   height: 81px !important;
+  // }
 
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .navbar-brand {
-    font-size: 28px;
-    line-height: 1px;
-  }
+  // .navbar-brand {
+  //   font-size: 28px;
+  //   line-height: 1px;
+  // }
 }
 
 // Large devices (desktops, 992px and up)
@@ -390,8 +437,8 @@ a {
   .info-bar {
     font-weight: 300;
     letter-spacing: 8px;
-    font-size: 13px;
-    padding-top: 2px;
+    height: 20px;
+    line-height: 8px;
   }
   .caption-lg {
     // font-size: 50px

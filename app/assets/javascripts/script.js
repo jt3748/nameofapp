@@ -1,7 +1,13 @@
 
 $(document).ready(function(){
   $(".hero").css({'height':($('.hero-img').height()+'px')});
-
+  $(".nav-white").css({'height':($('.bg-light').height()+'px')});
+  $( ".navbar-toggler" ).click(function() {
+    $( ".nav-white" ).slideDown( "slow", function() {
+      $(".nav-white").css({'height':($('.bg-light').height()+'px')});
+      // Animation complete.
+    });
+  });
   $(window).resize(function(){
     $(".responsive-body").css({'width':($("#navbar").width()+'px')});
     //.hero heights same as img-fluid
