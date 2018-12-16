@@ -1,6 +1,25 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.thank-you {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.alert, .notice {
+  display: none;
+}
+.user-links {
+  display: flex;
+  list-style-type: none;
+  padding-top: 0.5px;
+}
+.sign-up {
+  color: white;
+  &:visited {
+    color: white;
+  }
+}
 #img-sm {
   z-index: -4;
   position: fixed;
@@ -16,14 +35,20 @@ a:hover {
   text-shadow: 1px 1px 20px green;
 }
 html, body {
-  padding-top: 57px;
+  padding-top: 29px;
   margin: 0;
   // font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
   height:100%;
   scroll-behavior: smooth;
 }
 .wrapper {
-  margin-top: -30px;
+  top:12px;
+  min-height: 94vh;
+overflow: hidden;
+display: block;
+position: relative;
+padding-bottom: 50px;
+
 }
 header {
   position: fixed;
@@ -32,9 +57,14 @@ header {
   left: 0;
 }
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   // position: relative;
+  // bottom: 0;
   // width: 100%;
-  height: 30px;
+  height: 50px;
+  padding-top:15px;
   // bottom: 0;
  }
  footer p {
@@ -91,9 +121,8 @@ footer {
 .info-bar {
   width: 100%;
   background-color: black;
-  height: 30px;
+  height: 20px;
   color: white;
-  padding-top: 2px;
   font-weight: lighter;
   font-size: 11px;
 }
@@ -434,12 +463,12 @@ a {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
-  .info-bar {
-    font-weight: 300;
-    letter-spacing: 8px;
-    height: 20px;
-    line-height: 8px;
-  }
+  // .info-bar {
+  //   font-weight: 300;
+  //   letter-spacing: 8px;
+  //   height: 20px;
+  //   line-height: 8px;
+  // }
   .caption-lg {
     // font-size: 50px
   }

@@ -24,9 +24,24 @@
         <div class="info-bar">
           <div class="container">
             <div class="d-flex flex-row justify-content-end login-font letter-spacing-sm txt-sm">
-              <a class="p-1">Login</a>
-              <div class="p-1">&nbsp; · &nbsp;</div>
-              <div class="p-1">Create Account</div>
+              <ul class="user-links">
+                <% if user_signed_in? %>
+                <li class="">
+                  <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "sign-up") %>
+                </li>
+                <% else %>
+                <li class="">
+                  <%= link_to('Sign In', new_user_session_path, class: "sign-up") %>
+                </li>
+                <li class="">&nbsp; · &nbsp;</li>
+                <li class="">
+
+                    <%= link_to("Sign up", new_user_registration_path, class: "sign-up") %><br />
+                </li>
+                <% end %>
+              </ul>
+              <!-- <a class="p-1">Login</a> -->
+
             </div>
           </div>
         </div>
@@ -78,6 +93,7 @@
                 </li> -->
               </ul>
 
+
               <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -87,16 +103,19 @@
 
         </nav>
       </header>
-      </div>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
 
 
       <%= yield %>
-    <!-- </div><!--/wrapper-->
     <%= image_tag("cactus.jpg", id: "img-sm") %>
 
     <footer class="center">
-      <p>&copy; 2018 Master Medium</p>
+      &copy; 2018 Master Medium
     </footer>
+    <!-- </div><!--/wrapper-->
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXBZp9XkCcfHPyn-XvW9dlUaHCxnAl7bA&callback=initMap">
     </script>
