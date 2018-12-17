@@ -13,8 +13,8 @@
   z-index: 1;
 }
 .img-fit {
-  max-height: 140px;
-  min-height: 135px;
+  // max-height: 140px;
+  // min-height: 135px;
 }
 .product-name{
   font-size: 20px;
@@ -31,4 +31,10 @@
 }
 .show-edit-destroy{
   display: none;
+}
+.product-btn {
+  background-image: linear-gradient(to top, rgba(0, 123, 255, 1), rgba(0, 123, 255, 0));
+  color: #fff;
+  border-color: #007bff;
+  border-top: white;
 }

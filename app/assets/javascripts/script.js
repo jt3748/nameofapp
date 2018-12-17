@@ -12,9 +12,12 @@ $(document).ready(function(){
     $(".responsive-body").css({'width':($("#navbar").width()+'px')});
     //.hero heights same as img-fluid
     $(".hero").css({'height':($('.hero-img').height()+'px')});
+    $(".product-btn").css({'width':($('.product-img').width()+'px')})
+
   });
   // end window resize function
   $(".carousel-img").css({'width':($('.carousel-inner').width()+'px')})
+
 
   // var $root = $('html, body');
   // $('a').click(function() {
