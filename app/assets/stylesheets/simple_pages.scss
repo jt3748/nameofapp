@@ -6,8 +6,13 @@
   margin: 0 auto;
   padding-top: 80px;
 }
-.alert, .notice {
-  display: none;
+#alert, #notice {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: red;
 }
 .user-links {
   display: flex;
@@ -42,13 +47,13 @@ html, body {
   scroll-behavior: smooth;
 }
 .wrapper {
+  z-index: 1;
   top:12px;
-  min-height: 94vh;
-overflow: hidden;
-display: block;
-position: relative;
-padding-bottom: 50px;
-
+  min-height: 90vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
 }
 header {
   position: fixed;

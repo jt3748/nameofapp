@@ -8,15 +8,16 @@ $(document).ready(function(){
       // Animation complete.
     });
   });
+  $(".carousel-img").css({'width':($('.carousel-inner').width()+'px')});
   $(window).resize(function(){
     $(".responsive-body").css({'width':($("#navbar").width()+'px')});
     //.hero heights same as img-fluid
     $(".hero").css({'height':($('.hero-img').height()+'px')});
     $(".product-btn").css({'width':($('.product-img').width()+'px')})
+    $(".hero").css({'width':($('.product-img').width()+'px')})
 
   });
   // end window resize function
-  $(".carousel-img").css({'width':($('.carousel-inner').width()+'px')})
 
 
   // var $root = $('html, body');
@@ -32,7 +33,9 @@ $(document).ready(function(){
   //   return false;
   // });
 
-});
+}); //end doc ready
+$(".alert").delay(800).fadeOut(300);
+
 //GOOGLE MAP
 function initMap() {
   var myLatLng = {lat: 32.8709253, lng: -117.2130425}
