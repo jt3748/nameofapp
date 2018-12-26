@@ -1,0 +1,14 @@
+class CreateComments < ActiveRecord::Migration[5.2]
+  def change
+    create_table :comments do |t|
+      t.integer :user_id
+      t.integer :comment_id
+      t.text :description
+      t.integer :rating
+      t.string :total_rating
+      t.string :integer
+    end
+    add_index :comments, :user_id
+    add_index :comments, :comment_id
+  end
+end

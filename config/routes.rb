@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   root 'simple_pages#landing_page'
   resources :orders, only: [:index, :show, :create, :destroy]
   post 'simple_pages/thank_you'
+  resources :comments
 
 end
