@@ -9,4 +9,11 @@ class Product < ApplicationRecord
     Product.where("name ilike ?", "%#{search_term}%")
     end
   end
+  #get highest rating comment first
+  def highest_rating_comment
+  comments.rating_desc.first
+  end
+  def lowest_rating_comment
+  comments.rating_asc.first
+  end
 end

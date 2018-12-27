@@ -1,33 +1,67 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-xm-12 col-sm-6">
+      <div class="product-show"">
+        <p>
+          <%= link_to (image_tag(@product.image_url, class: "img-fluid img-fit product-img")unless @product.image_url.nil?) %>
+        </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      </div>
+    </div>
+    <div class="col-xm-12 col-sm-6 center">
+      <h1>
+        <%= @product.name %>
+      </h1>
 
-<div style="display:inline;">
-  <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
-  </p>
+      <p>
+        <%= @product.description %>
 
+      </p>
+
+      <!-- <p>
+        <strong>Color:</strong>
+        <%# <%= @product.color  %> %>
+      </p>-->
+
+      <p>
+        <strong>Price:</strong>
+        $<%= @product.price %>
+      </p>
+    </div>
+  </div>
+  <div class="row pt-5 rounded">
+    <div class="col-12 center bg-light">
+      <p class="pt-3"><strong>Product Dimensions</strong><p>
+
+    </div>
+  </div>
+  <div class="row bg-light">
+
+    <div class="col-12 col-sm-5">
+      <%=image_tag("box.png", class: "img-fluid mw-300")%>
+    </div>
+    <div class="col-sm-7">
+      <div class="center pt-3">
+        <p>Length x Width x Depth (inches)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-light">
+    <div class="col-12">
+      <div class="col-12 center">
+        <p class="pt-3"><strong>Product Review</strong><p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <%= @product.highest_rating_comment %>
+      <%= @product.lowest_rating_comment %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
+    </div>
+
+  </div>
 </div>
-
-
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
