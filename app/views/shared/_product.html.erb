@@ -1,7 +1,7 @@
 <a>
 <div class="product-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-  <%= image_tag(product.image_url, class: "img-fluid img-fit product-img")unless product.image_url.nil? %>
+  <%= link_to (image_tag(product.image_url, class: "img-fluid img-fit product-img")unless product.image_url.nil?), product %>
   <div class="product-infobox">
     <a href="#"><h1 class="product-name"><%= product.name %></h1></a>
     <p class="product-description"><%= product.description %></p>

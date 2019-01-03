@@ -1,0 +1,16 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#comments {}
+.product-reviews {}
+#comments .user {
+  width: 100%;
+  display: flex;
+}
+#comments .user-icon {
+  font-size: 20px;
+}
+#comments .user-name {
+  display: table-cell;
+  vertical-align: middle;
+}

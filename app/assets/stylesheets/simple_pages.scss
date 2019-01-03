@@ -1,6 +1,9 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.yield {
+  text-shadow: 1px 1px 1px white;
+}
 .thank-you {
   width: 100%;
   margin: 0 auto;
@@ -45,6 +48,7 @@ html, body {
   // font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
   height:100%;
   scroll-behavior: smooth;
+
 }
 .wrapper {
   z-index: 1;
