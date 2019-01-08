@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.delete_all
-Comment.delete_all
 Order.delete_all
+Comment.delete_all
+Product.delete_all
+
 Product.create(price: 12.00, name: "Wooden Ornament", description: "3x3inches", image_url: "art/ornament.jpg")
 Product.create(price: 85.02, name: "Stone Angel", description: "1x3feet", image_url: "art/babyangel.jpg")
 Product.create(price: 45.02, name: "Ceramic Angel", description: "4x6inches", image_url: "art/angel_ceramic.jpg")
