@@ -56,7 +56,8 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-light">
           <div class="container nav-container">
-            <a class="navbar-brand" href="#">MASTER MEDIUM</a>
+            <%= link_to "master medium", root_path, class: "navbar-brand caps" %>
+            <!-- <a class="navbar-brand caps" href="#">Master Medium</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -117,15 +118,15 @@
         <p id="alert" class="alert alert-danger"><%= alert %></p>
       <% end %>
 
-      <div class="yield">
+
         <%= yield %>
-      </div>
+
 
 
     <%= image_tag("cactus.jpg", id: "img-sm") %>
 
     <footer class="center">
-      &copy; 2018 Master Medium
+      &copy; 2018 MasterMedium
     </footer>
     <!-- </div><!--/wrapper-->
     <script async defer

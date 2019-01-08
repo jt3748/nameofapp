@@ -7,6 +7,13 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      # respond_to do |format|
+        if @product.nil?
+          # format.html { redirect_to "/products/search_error.html.erb", notice: "Sorry, we couldn't find any results matching \"#{search_term}\", check out what else we offer" }
+          flash.now[:notice] = "Sorry, we couldn't find any results matching \"#{search_term}\", check out what else we offer"
+          @products = Product.limit(8)
+        end
+      # end
     else
       @products = Product.all
     end

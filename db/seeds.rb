@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.delete_all
+Comment.delete_all
+Order.delete_all
 Product.create(price: 12.00, name: "Wooden Ornament", description: "3x3inches", image_url: "art/ornament.jpg")
 Product.create(price: 85.02, name: "Stone Angel", description: "1x3feet", image_url: "art/babyangel.jpg")
 Product.create(price: 45.02, name: "Ceramic Angel", description: "4x6inches", image_url: "art/angel_ceramic.jpg")
@@ -13,10 +15,3 @@ Product.create(price: 12.02, name: "Metal Figurines", description: "1.5x2.75inch
 Product.create(price: 65.02, name: "Acrylic Canvas", description: "3x3feet", image_url: "art/ocean_canvas.jpg")
 Product.create(price: 25.02, name: "Acrylic Canvas", description: "3x1.5feet", image_url: "art/cubism.jpg")
 Product.create(price: 15.02, name: "3D Printed Skull", description: "0.5x0.5feet", image_url: "10.jpg")
-# Product.create(price: "", name: "", description: "", image_url: "")
-# Order.delete_all
-# Order.create(user_id: 1, product_id: 1, total: 10.0)
-# Order.create(user_id: 1, product_id: 2, total: 15.0)
-# Order.create(user_id: 1, product_id: 3, total: 25.0)
-# Order.create(user_id: 1, product_id: 4, total: 35.0)
-# Order.create(user_id: 1, product_id: 5, total: 45.0)
