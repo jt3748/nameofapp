@@ -1,6 +1,7 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .pagination {
     padding: 1rem;
     justify-content: center;
@@ -25,7 +26,8 @@
   // min-height: 135px;
 }
 .product-name{
-  font-size: 20px;
+  font-size: 17px;
+  color: #000000;
 }
 .product-description {
   letter-spacing: 2px;
@@ -41,8 +43,12 @@
   display: none;
 }
 .product-btn {
-  background-image: linear-gradient(to top, rgba(0, 123, 255, 1), rgba(0, 123, 255, 0));
-  color: #fff;
-  border-color: #007bff;
-  border-top: white;
+  // background-image: linear-gradient(to top, rgba(0, 123, 255, 1), rgba(0, 123, 255, 0));
+  background-color: #007bff !important;
+  color: #fff !important;
+  border-color: #007bff !important;
+  padding: 4px !important;
+  // border-top: white;
+}
+.product-img {
 }

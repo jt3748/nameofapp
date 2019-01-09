@@ -3,23 +3,15 @@
   <head>
     <title>Master Medium</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- there’s some weird syntax that looks like this: <%= %>. That’s the .erb part. "ERB" stands for "embedded Ruby". It's a way to include actual Ruby code (as you've learned in the previous Exercises) right in the middle of your HTML files. By
-    embedding Ruby code between tags that look like this: <% %>, you can include and execute Ruby functions right in the middle of your HTML. Add the =, like so: <%= %> and the output of the Ruby will be inserted into the HTML. (This is important to
-    remember, so take note of or bookmark this.) In just a moment, you'll see an example of what that means. -->
+    <%= csrf_meta_tags %>
+
   </head>
 
   <body>
@@ -32,7 +24,6 @@
                 <% if user_signed_in? %>
                 <li><i class="fas fa-shopping-cart"></i></li>
                 <li class="">&nbsp; · &nbsp;</li>
-
                 <li class="">
                   <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "sign-up") %>
                 </li>
@@ -42,13 +33,10 @@
                 </li>
                 <li class="">&nbsp; · &nbsp;</li>
                 <li class="">
-
-                    <%= link_to("Sign up", new_user_registration_path, class: "sign-up") %><br />
+                  <%= link_to("Sign up", new_user_registration_path, class: "sign-up") %><br />
                 </li>
                 <% end %>
               </ul>
-              <!-- <a class="p-1">Login</a> -->
-
             </div>
           </div>
         </div>
@@ -57,11 +45,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light">
           <div class="container nav-container">
             <%= link_to "master medium", root_path, class: "navbar-brand caps" %>
-            <!-- <a class="navbar-brand caps" href="#">Master Medium</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  ml-auto taj-nav-link">
                 <li class="nav-item  nav-link  active">
@@ -76,61 +62,45 @@
                 <li class="nav-item nav-link">
                   <%= link_to "Contact", simple_pages_contact_path, :class => current_class?(simple_pages_contact_path) %>
                 </li>
-              <!-- </ul>
-              <ul> -->
                 <li class="nav-item nav-search">
                   <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                     <%= form.text_field :q, id: 'q', value: params[:q] %>
                     <%= form.submit 'Search' %>
                   <% end %>
                 </li>
-
-                <!-- <li class="nav-item  nav-link dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li> -->
-                <!-- <li class="nav-item nav-link ">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li> -->
               </ul>
-
-
-              <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> -->
             </div>
           </div>
-
         </nav>
       </header>
-      <% if notice %>
-        <p id="notice" class="alert alert-primary"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p id="alert" class="alert alert-danger"><%= alert %></p>
-      <% end %>
 
+    <%# <% if notice %>
+      <!-- <p id="notice" class="alert alert-primary"><%# notice %></p> -->
+    <%# <% end %>
+    <%# <% if alert %>
+      <!-- <p id="alert" class="alert alert-danger"><%# alert %></p> -->
+    <%# <% end %>
 
-        <%= yield %>
+    <% unless flash.empty? %>
+	  <script type="text/javascript">
+	      <% flash.each do |f| %>
+	      <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+	     	 toastr['<%= type %>']('<%= f[1] %>');
+	      <% end %>
+	  </script>
+	 <% end %>
 
+    <div class="yield">
+      <%= yield %>
+    </div>
 
-
-    <%= image_tag("cactus.jpg", id: "img-sm") %>
+    <%= image_tag("cactus2.png", id: "img-sm") %>
+    <%= image_tag("cactus2.png", id: "img-sm-2") %>
 
     <footer class="center">
-      &copy; 2018 MasterMedium
+      &copy; <%= Date.today.year %> MasterMedium
     </footer>
     <!-- </div><!--/wrapper-->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXBZp9XkCcfHPyn-XvW9dlUaHCxnAl7bA&callback=initMap">
-    </script>
+    
   </body>
 </html>

@@ -13,7 +13,7 @@ $(document).ready(function(){
     $(".responsive-body").css({'width':($("#navbar").width()+'px')});
     //.hero heights same as img-fluid
     $(".hero").css({'height':($('.hero-img').height()+'px')});
-    $(".product-btn").css({'width':($('.product-img').width()+'px')})
+    // $(".product-btn").css({'width':($('.product-img').width()+'px')})
     $(".hero").css({'width':($('.product-img').width()+'px')})
 
   });

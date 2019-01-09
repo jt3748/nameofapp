@@ -1,6 +1,12 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.active {
+  color: green !important;
+}
+.text-shadow-none {
+  text-shadow: none;
+}
 .yield {
   text-shadow: 1px 1px 1px white;
 }
@@ -28,19 +34,38 @@
     color: white;
   }
 }
+#img-sm-2 {
+    z-index: -4;
+    position: fixed;
+    /* height: 300px; */
+    width: 300px;
+    right: -170px;
+    bottom: 158px;
+    opacity: .7;
+    -webkit-transform: rotate(-28deg);
+    transform: rotate(-28deg);
+}
+
 #img-sm {
   z-index: -4;
-  position: fixed;
-  height: 300px;
-  width: 300px;
-  right: 0px;
-  bottom: 0px;
-  opacity: .7;
+    position: fixed;
+    /* height: 300px; */
+    width: 300px;
+    left: -190px;
+    bottom: -30px;
+    opacity: .7;
+    transform: rotate(16deg);
+}
+@media (max-width: 768px) {
+  #img-sm-2, #img-sm {
+    visibility: hidden;
+  }
 }
 a:hover {
-  background: transparent;
-  text-decoration: none;
-  text-shadow: 1px 1px 20px green;
+  background: transparent !important;
+  text-decoration: none !important;
+  text-shadow: 1px 1px 20px green !important;
+  color: inherit;
 }
 html, body {
   padding-top: 29px;
@@ -112,7 +137,10 @@ footer {
 //   padding: 0 !important;
 // }
 .taj-nav-link a {
-  color: rgba(0,0,0,.5)
+  color: rgba(0,0,0,.5);
+  &:hover {
+    color: rgba(0, 0, 0, 0.5) !important;
+  }
 }
 @media (min-width: 575px) {
   // .taj-nav-link li {
@@ -275,8 +303,9 @@ a {
   font-size: 2.5em;
   padding-top: 1px
 }
-//about
+
 .caption {
+  padding-top: 1rem;
   padding-bottom: 15px;
   font-size: 32px;
 }
@@ -298,19 +327,9 @@ a {
   font-weight: lighter;
   line-height: 1em;
 }
-.z-2 {
-  z-index: -2;
+.about-article {
+  line-height: 2;
 }
-.z-1 {
-  z-index: -1;
-}
-.z1 {
-  z-index: 1;
-}
-.z2 {
-  z-index: 2;
-}
-
 /********************* GOOGLE MAP ********************/
 #map {
   margin-bottom: 25px;
