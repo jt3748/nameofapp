@@ -10,6 +10,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
 end
 
+  # added to please the Github security alerts
+  gem "loofah", ">= 2.2.3"
+  gem "rack", ">= 2.0.6"
+  # /added to please the Github security alerts
+
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
