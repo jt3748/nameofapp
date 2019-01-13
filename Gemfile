@@ -3,12 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'rails-controller-testing'
-
-# Run against the latest stable release
-group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
-end
 
   # added to please the Github security alerts
   gem "loofah", ">= 2.2.3"
@@ -83,3 +77,12 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'bootstrap', '~> 4.1.0'
 gem 'toastr-rails'
+
+gem 'rails-controller-testing'
+
+# Run against the latest stable release
+group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+end
+
+# gem 'sendgrid-ruby'
