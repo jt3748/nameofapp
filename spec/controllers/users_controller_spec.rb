@@ -4,8 +4,8 @@ describe UsersController, type: :controller do
   # let(:user) {User.create!(email:"user@email.com", password:"password", password_confirmation: "password" )}
   # let(:user_second) { User.create!(email:"second_user@email.com", password: "password", first_name: "SecondUser", last_name: "LastName", confirmed_at: Time.now) }
   # let(:user_admin) { User.create!(email:"admin@email.com", password: "password", first_name: "Admin", last_name: "LastName", confirmed_at: Time.now, admin: true) }
-  @user = FactoryBot.create(:user)
-  @user2 = FactoryBot.create(:user)
+  let(:user) { FactoryBot.create(:user) }
+  let(:user2) { FactoryBot.create(:user) }
 
   describe 'GET #show' do
     context 'when a user is logged in' do
