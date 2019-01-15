@@ -87,4 +87,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
 end
 
+gem 'stripe'
 # gem 'sendgrid-ruby'

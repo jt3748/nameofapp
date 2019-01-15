@@ -18,7 +18,12 @@
         <strong>Price:</strong>
         <%= @product.price %>
       </p>
-      Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      Average Rating: <div class="rated pt-2" data-score="<%= @product.average_rating %>"></div>
+    <div class="pt-2">
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    </div>
       <!--<%# <%= link_to 'Edit', edit_product_path(@product) %> | %>-->
       <p class="pt-3"><%= link_to 'Back to previous page', products_path %></p>
 
