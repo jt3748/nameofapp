@@ -82,6 +82,8 @@ gem 'rails-controller-testing'
 
 # Run against the latest stable release
 group :development, :test do
+  gem "factory_bot_rails", "~> 4.0"
+
   gem 'rspec-rails', '~> 3.8'
 end
 
