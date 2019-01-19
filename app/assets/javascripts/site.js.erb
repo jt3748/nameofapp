@@ -10,8 +10,36 @@ $(document).on('turbolinks:load', function(){
    starOff: '<%= asset_path 'star-off.png' %>',
    starOn: '<%= asset_path 'star-on.png' %>',
    readOnly: true,
-   score: function() {
-     return $(this).attr('data-score');
-   }
- });
+     score: function() {
+       return $(this).attr('data-score');
+     }
+  });
+function setElevate(){
+  if ( $(window).width() > 768 ) {
+      var height = $('.product-img').height()
+      var width = $('.product-img').width()
+
+      $('.img-zoom').elevateZoom({
+        zoomWindowHeight: height,
+        zoomWindowWidth: width,
+        zoomWindowPosition: 1
+      });
+
+      $('.img-zoom').mouseenter(function(){
+        $('.prod-info').addClass("d-none");
+      });
+
+      $('.img-zoom').mouseout(function(){
+        $('.prod-info').removeClass("d-none");
+      });
+    }else{
+      var height = 0;
+      var width = 0;
+    }
+  }
+  setElevate();
+  $(window).on('resize', function(){
+    setElevate();
+  });
+
 });
