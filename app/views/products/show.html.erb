@@ -5,27 +5,30 @@
         <%= image_tag(@product.image_url, class: "img-fluid img-fit product-img img-zoom elevateZoom", data_zoom_image: @product.image_url)unless @product.image_url.nil? %>
     </div>
     <div class="col-sm-12 col-md-6 pt-3 prod-info">
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
+      <% cache @product do %>
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @product.description %>
-      </p>
+        <p>
+          <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
 
-      <p>
-        <strong>Price:</strong>
-        <%= @product.price %>
-      </p>
-      Average Rating: <div id='average-rating' class="rated pt-2" data-score="<%= @product.average_rating %>"></div>
-    <div class="pt-2">
-      <%= form_with(url: '/payments/create') do |form| %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
+        <p>
+          <strong>Price:</strong>
+          <%= @product.price %>
+        </p>
+        Average Rating: <div id='average-rating' class="rated pt-2" data-score="<%= @product.average_rating %>"></div>
+        <div class="pt-2">
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
+        </div>
       <% end %>
-    </div>
+
       <!--<%# <%= link_to 'Edit', edit_product_path(@product) %> | %>-->
       <p class="pt-3"><%= link_to 'Back to previous page', products_path %></p>
 

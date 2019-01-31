@@ -89,3 +89,5 @@ end
 
 gem 'stripe'
 # gem 'sendgrid-ruby'
+
+gem 'dalli'
