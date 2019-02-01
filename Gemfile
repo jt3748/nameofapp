@@ -91,3 +91,5 @@ gem 'stripe'
 # gem 'sendgrid-ruby'
 
 gem 'dalli'
+gem 'redis-rails'
+gem 'newrelic_rpm'
