@@ -2,7 +2,7 @@
   <div class="row pt-3">
     <div class="col-sm-12 col-md-6">
 
-        <%= image_tag(@product.image_url, class: "img-fluid img-fit product-img img-zoom elevateZoom", data_zoom_image: @product.image_url)unless @product.image_url.nil? %>
+        <%= image_tag(@product.image_url, class: "img-fluid img-fit product-img ", data_zoom_image: @product.image_url)unless @product.image_url.nil? %>
     </div>
     <div class="col-sm-12 col-md-6 pt-3 prod-info">
       <% cache @product do %>
