@@ -12,7 +12,8 @@
     <p><strong><%= "Rating: #{comment.rating}/5" %></strong></p>
     <p><%= comment.body %></p>
     <p><small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-    <% if signed_in? && current_user.admin? %>
+    <!-- <%# <% if signed_in? && current_user.admin?  %>  this was commented out and replaced with the below line as a workaround for Devise in lesson 6.14-->
+    <% if current_user && current_user.admin? %>
      <%= link_to ('<i class="far fa-trash-alt fa-3x"></i>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy "%>
     <% end %>
     <div class="rated" data-score="<%= comment.rating %>"></div>
