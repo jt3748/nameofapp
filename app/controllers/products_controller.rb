@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product.viewed!
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
@@ -75,6 +76,9 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
