@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
   post 'simple_pages/thank_you'
   post 'payments/create'
+  mount ActionCable.server => '/cable'
+
 end

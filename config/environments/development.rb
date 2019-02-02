@@ -61,6 +61,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
+  config.app_generators.javascript_engine = :javascript #this wll tell rails generator to generate plain JavaScript files instead of CoffeeScript files
 end
 
 # This will enable your ActionMailer to use the SendGrid plugin to send out emails from Heroku:

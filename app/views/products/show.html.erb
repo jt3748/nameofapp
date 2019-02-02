@@ -42,6 +42,8 @@
   </div>
   <div class="row pt-3">
     <div class="col-12">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
       <%= render 'shared/comments' %>
       <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 
