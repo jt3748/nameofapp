@@ -8,11 +8,11 @@
 Order.delete_all
 Comment.delete_all
 Product.delete_all
-Product.create(price: 15.99, name: "Item 1", description: "Insert product description here", image_url: "plant12.jpeg")
-Product.create(price: 15.99, name: "Item 5", description: "Insert product description here", image_url: "plant6.png")
-Product.create(price: 15.99, name: "Item 6", description: "Insert product description here", image_url: "plant7.png")
-Product.create(price: 15.99, name: "Item 7", description: "Insert product description here", image_url: "plant8.png")
-Product.create(price: 15.99, name: "Item 9", description: "Insert product description here", image_url: "plant10.png")
-Product.create(price: 15.99, name: "Item 10", description: "Insert product description here", image_url: "plant11.png")
-Product.create(price: 15.99, name: "Item 11", description: "Insert product description here", image_url: "plant2.png")
-Product.create(price: 15.99, name: "Item 12", description: "Insert product description here", image_url: "plant3.png")
+Product.create(price: 15.99, name: "Item 1", description: "Insert product description here", image_url: "plant1.png")
+Product.create(price: 15.99, name: "Item 5", description: "Insert product description here", image_url: "plant2.png")
+Product.create(price: 15.99, name: "Item 6", description: "Insert product description here", image_url: "plant3.png")
+Product.create(price: 15.99, name: "Item 7", description: "Insert product description here", image_url: "plant4.png")
+Product.create(price: 15.99, name: "Item 9", description: "Insert product description here", image_url: "plant5.png")
+Product.create(price: 15.99, name: "Item 10", description: "Insert product description here", image_url: "plant6.png")
+Product.create(price: 15.99, name: "Item 11", description: "Insert product description here", image_url: "plant7.png")
+Product.create(price: 15.99, name: "Item 12", description: "Insert product description here", image_url: "plant8.png")
