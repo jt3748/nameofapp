@@ -1,5 +1,8 @@
 
 $(document).ready(function(){
+
+
+
   $(".hero").css({'height':($('.hero-img').height()+'px')});
   $(".nav-white").css({'height':($('.bg-light').height()+'px')});
   $( ".navbar-toggler" ).click(function() {

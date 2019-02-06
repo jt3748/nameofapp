@@ -1,6 +1,51 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    bottom: -25px;
+  }
+  50% {
+    opacity: 1;
+    bottom: 5px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+.slide-0 {
+  animation-delay: 0s;
+}
+.slide-1 {
+  animation-delay: 0.1s;
+}
+.slide-2 {
+  animation-delay: 0.2s;
+}
+.slide-3 {
+  animation-delay: 0.3s;
+}
+.slide-4 {
+  animation-delay: 0.4s;
+}
+.slide-5 {
+  animation-delay: 0.5s;
+}
+.slide-6 {
+  animation-delay: 0.6s;
+}
+.slide-7 {
+  animation-delay: 0.7s;
+}
+.slide-8 {
+  animation-delay: 0.8s;
+}
+.card {
+  animation-name: slideUpFadeIn;
+  animation-duration: 2s;
+}
 
 .pagination {
     padding: 1rem;
@@ -38,7 +83,7 @@
 }
 .product-row {
   padding-bottom: 10px;
-  
+
 }
 .show-edit-destroy{
   display: none;
