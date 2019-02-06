@@ -16,24 +16,11 @@ $(document).ready(function(){
     // $(".product-btn").css({'width':($('.product-img').width()+'px')})
     $(".hero").css({'width':($('.product-img').width()+'px')})
 
-  });
-  // end window resize function
-
-
-  // var $root = $('html, body');
-  // $('a').click(function() {
-  //   var href = $.attr(this, 'href');
-  //   if (href != undefined && href != '#') {
-  //     $root.animate({
-  //       scrollTop: $(href).offset().top
-  //     }, 500, function () {
-  //       window.location.hash = href;
-  //     });
-  //   }
-  //   return false;
-  // });
+  });// end window resize function
 
 }); //end doc ready
+
+
 $(".alert").delay(800).fadeOut(300);
 
 //GOOGLE MAP
@@ -54,3 +41,7 @@ function initMap() {
 $('#map').on('click', function(){
   $(this).css('border', '2px solid red');
 });
+ //Collapse hamburger menu on click
+$(document).on('click',function(){
+$('.collapse').collapse('hide');
+})

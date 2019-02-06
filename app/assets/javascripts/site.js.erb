@@ -1,4 +1,8 @@
 $(document).on('turbolinks:load', function(){
+  // $('.card').fadeIn(1000).removeClass('d-none');
+  $('.card').fadeOut(200);
+  $('.card').fadeIn(300);
+
   $('.rating').raty({
     starHalf: '<%= asset_path "star-half.png" %>',
     starOff: '<%= asset_path "star-off.png" %>',

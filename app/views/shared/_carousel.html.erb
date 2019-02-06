@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h3 class="center txt-md">Latest Product: <%= @featured_product.name %> </h3>
+  <h3 class="center txt-md">Featured Product: <%= @featured_product.name %> </h3>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -13,7 +13,8 @@
     <div class="carousel-inner">
       <% @products.each do |product| %>
       <div class="carousel-item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url, class:"carousel-img") %>
+        <%# <%= image_tag(product.image_url, class:"carousel-img") %> %>
+        <%= link_to (image_tag(product.image_url, :class => "carosel-img")unless product.image_url.nil?), product %>
         <div class="carousel-caption d-md-block">
           <%= product.name %>
         </div>
