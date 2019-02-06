@@ -1,5 +1,13 @@
-
+$('.card:eq( 0 )').addClass('slide-0')
+$('.card:eq( 1 )').addClass('slide-1')
+$('.card:eq( 2 )').addClass('slide-2')
+$('.card:eq( 3 )').addClass('slide-3')
+$('.card:eq( 4 )').addClass('slide-4')
+$('.card:eq( 5 )').addClass('slide-5')
+$('.card:eq( 6 )').addClass('slide-6')
+$('.card:eq( 7 )').addClass('slide-7')
 $(document).ready(function(){
+
 
 
 
