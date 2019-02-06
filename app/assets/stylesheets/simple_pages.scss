@@ -4,12 +4,7 @@
 .active {
   color: green !important;
 }
-.text-shadow-none {
-  text-shadow: none;
-}
-.yield {
-  text-shadow: 1px 1px 1px white;
-}
+
 .thank-you {
   width: 100%;
   margin: 0 auto;
@@ -170,7 +165,7 @@ footer {
 }
 
 #hero {
-  -webkit-mask-image: -webkit-gradient(linear, left 86.5%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.08)))
+  -webkit-mask-image: -webkit-gradient(linear, left 86.5%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
 
   // -webkit-mask-image: -webkit-gradient(
   //   linear,  top,  bottom,
