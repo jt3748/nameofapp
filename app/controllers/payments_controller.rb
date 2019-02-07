@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-
+  protect_from_forgery
   def create
     @product = Product.find(params[:product_id])
     @user = current_user
